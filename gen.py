@@ -1,8 +1,11 @@
 import random
+import sys
+
 
 specials = ['!','@','#','$','%','^','&','*']
 caps = [chr(i) for i in range(65,91)]
 lowers = [i.lower() for i in caps]
+
 
 def main(mlen):
 	global specials
@@ -23,5 +26,5 @@ def main(mlen):
 
 
 if __name__ == "__main__":
-	passwd = main(16)
-	print("Passwd:",passwd)
+	passwd = main(int(sys.argv[1]))
+	print("Passwd:", passwd)
